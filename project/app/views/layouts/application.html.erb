@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+      <head>
+            <title>产品发布系统</title>
+            <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+            <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+            <%= csrf_meta_tags %>
+      </head>
+
+      <body>
+              <nav class="navbar navbar-inverse" role="navigation">
+                  <div class="navbar-header">
+                      <a class="navbar-brand" href="/">产品发布系统</a>
+                  </div>
+                  <div class="nav navbar-left navbar-btn">
+                      <%= link_to '产品列表',products_path , class: "btn btn-default"%>
+                  		<%= link_to '种类列表',ptypes_path , class: "btn btn-default"%>
+                  		<%= link_to '发布产品',new_product_path , class: "btn btn-default"%>
+                  		<%= link_to '增加分类',new_ptype_path , class: "btn btn-default"%>
+                  </div>
+              </nav>
+
+              <div class="container">
+                  <%= yield %>
+              </div>
+              <div id="footer">
+              		Copyright zhaole@vip.qq.com &copy; 2015
+              </div>
+      </body>
+</html>

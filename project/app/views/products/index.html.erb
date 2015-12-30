@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+<h2>产品列表</h2>
+
+<table  class="table table-hover">
+  <thead>
+    <tr>
+      <th>名称</th>
+      <th>描述</th>
+      <th>分类</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product.name %></td>
+        <td><%= product.description %></td>
+        <td><%= product.ptype.name if product.ptype %></td>
+        <td><%= link_to '详情', product %></td>
+        <td><%= link_to '修改', edit_product_path(product) %></td>
+        <td><%= link_to '删除', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<%= will_paginate @products %>
+
+<br>

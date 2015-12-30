@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>名称:</strong>
+  <%= @ptype.name %>
+</p>
+<p>
+  <b>本类产品有:</b>
+  <%= (@ptype.products.collect { |product| product.name }).join(", ") %>
+</p>
+
+<%= link_to '编辑', edit_ptype_path(@ptype) %> |
+<%= link_to '返回', ptypes_path %>

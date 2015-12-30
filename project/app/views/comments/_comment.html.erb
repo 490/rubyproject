@@ -1,0 +1,8 @@
+<%= div_for comment do %>
+  <p>评论时间
+     <%= time_ago_in_words(comment.created_at) %>
+  <br />
+
+<p class="text-danger"><strong><%= comment.content %></strong></p>
+  </p>
+<% end %>

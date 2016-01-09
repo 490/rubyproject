@@ -11,18 +11,18 @@
  * file per style scope.
  *
  */
- @import "bootstrap-sprockets";
-@import "bootstrap";
- #left-panel{
- 	float: left;
- 	margin: 10px;
+
+ #right-panel{
+ 	float: right;
+ 	margin: 80px;
  	padding: 30px;
- 	border-right: 2px solid;
+ 	border-left: 2px solid;
  	font: small-caps 15px/15px "Times New Roman", serif;
  }
  #main-panel{
  	float: left;
- 	padding: 10px;
+ 	padding: 30px;
+ 	margin: 40px;
  	font: 15px/15px "Times New Roman", serif;
 
  }

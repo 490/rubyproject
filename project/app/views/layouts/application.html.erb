@@ -9,18 +9,15 @@
       </head>
 
       <body>
-              <nav class="navbar navbar-inverse" role="navigation">
-                  <div class="navbar-header">
-                      <a class="navbar-brand" href="/">产品发布系统</a>
-                  </div>
-                  <div class="nav navbar-left navbar-btn">
-                      <%= link_to '产品列表',products_path , class: "btn btn-default"%>
-                  		<%= link_to '种类列表',ptypes_path , class: "btn btn-default"%>
-                  		<%= link_to '发布产品',new_product_path , class: "btn btn-default"%>
-                  		<%= link_to '增加分类',new_ptype_path , class: "btn btn-default"%>
-                  </div>
-              </nav>
-
+              <div id="banner">
+                <h1>产品发布系统</h1>
+              </div>
+              <div id="right-panel">
+                      <%= link_to '产品列表',products_path %><br>
+                  		<%= link_to '种类列表',ptypes_path%><br>
+                  		<%= link_to '发布产品',new_product_path %><br>
+                  		<%= link_to '增加分类',new_ptype_path %><br>
+              </div>
               <div class="container">
                   <%= yield %>
               </div>
